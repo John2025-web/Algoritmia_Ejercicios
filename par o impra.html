@@ -1,0 +1,42 @@
+<!--NOMBRE: Verificar si un número es par o impar
+ENTRADA: Número ingresado por el usuario (decimal o entero)
+SALIDA: Mensaje indicando si el número es par o impar
+PROCESO:
+        El usuario ingresa un número en el campo correspondiente.
+        El programa convierte el valor ingresado a número decimal (float).
+        Se calcula el residuo de la división del número entre 2.
+        Si el residuo es cero, el número es par y se muestra el mensaje correspondiente.
+        Si el residuo no es cero, el número es impar y se muestra el mensaje correspondiente.-->
+
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAR O IMPAR</title>
+</head>
+<body>
+    <h2>INGRESE UN NÚMERO</h2>
+    <input type="number" id="numero">
+    <button onclick="verificar()">Comprobar</button>
+    <p id="resultado"></p>
+
+    <script>
+        function verificar() {
+            let numero = parseFloat(document.getElementById("numero").value);
+            let resultado = "";
+
+            if (numero % 2 === 0) {
+                resultado = "El número es PAR.";
+        
+            } else {
+                resultado = "El número es IMPAR.";
+            }
+
+            document.getElementById("resultado").innerText = resultado;
+        }
+    </script>
+</body>
+</html>

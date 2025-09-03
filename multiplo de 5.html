@@ -1,0 +1,40 @@
+<!--NOMBRE: Verificar si un número es mayor o menor que 100
+ENTRADA: Número ingresado por el usuario (decimal o entero)
+SALIDA: Mensaje indicando si el número es mayor o menor que 100
+PROCESO:
+        El programa solicita al usuario que ingrese un número.
+        Convierte el valor ingresado a un número decimal (float).
+        Calcula el residuo de la división del número entre 5.
+        Si el residuo es cero, el número es múltiplo de cinco y se muestra el mensaje correspondiente.
+        Si el residuo no es cero, el número no es múltiplo de cinco y se muestra el mensaje correspondiente.-->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MULTIPLO DE CINCO</title>
+</head>
+<body>
+    <h2>INGRESE UN NÚMERO</h2>
+    <input type="number" id="numero">
+    <button onclick="verificar()">Comprobar</button>
+    <p id="resultado"></p>
+
+    <script>
+        function verificar() {
+            let numero = parseFloat(document.getElementById("numero").value);
+            let resultado = "";
+
+            if (numero % 5 === 0) {
+                resultado = "El número es multiplo de cinco.";
+        
+            } else {
+                resultado = "El número no es multiplo de cinco.";
+            }
+
+            document.getElementById("resultado").innerText = resultado;
+        }
+    </script>
+</body>
+</html>

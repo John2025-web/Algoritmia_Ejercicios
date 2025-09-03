@@ -1,0 +1,46 @@
+<!--
+NOMBRE: Calcular descuento según el monto de la compra
+ENTRADA: Monto ingresado de la compra (número)
+SALIDA: Monto del descuento aplicado (si corresponde)
+PROCESO:
+        Si el monto de la compra es mayor a 1000, se aplica un 10% de descuento.
+        Si el monto es menor o igual a 1000, no se aplica descuento.
+        Se muestra el descuento calculado al usuario.-->
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calcular Descuento</title>
+</head>
+<body>
+    <h2>Ejemplo: Calcular descuento según la compra</h2>
+
+    <!-- Entrada de datos -->
+    <label for="compra">Ingrese el monto de su compra:</label>
+    <input type="number" id="compra" />
+
+    <button onclick="calcularDescuento()">Calcular</button>
+
+    <!-- Resultado -->
+    <p id="resultado"></p>
+
+    <script>
+        function calcularDescuento() {
+            let compra = parseFloat(document.getElementById("compra").value);
+            let descuento = 0;
+
+            if (compra > 1000) {
+                descuento = compra * 0.10; // 10% de descuento
+            } else {
+                descuento = 0;
+            }
+
+            document.getElementById("resultado").innerText =
+                "El descuento aplicado es: $" + descuento.toFixed(2);
+        }
+    </script>
+</body>
+</html>

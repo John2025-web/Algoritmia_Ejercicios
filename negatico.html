@@ -1,0 +1,44 @@
+<!--NOMBRE: Identificar si un número es positivo, negativo o cero
+ENTRADA: Número ingresado por el usuario (decimal o entero)
+SALIDA: Mensaje que indica si el número es positivo, negativo o cero, o si la entrada es inválida
+PROCESO:
+        El usuario ingresa un número en el campo correspondiente.
+        El programa verifica si el valor ingresado es un número válido.
+        Si no es válido, muestra un mensaje solicitando un número correcto.
+        Si es válido, evalúa si el número es mayor que cero, menor que cero o igual a cero.
+        Muestra un mensaje indicando si el número es positivo, negativo o cero.-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEGATIVO</title><h2>Identificar si un número es positivo o negativo</h2>
+    <input type="number" id="numero" placeholder="Ingresa un número">
+    <button onclick="verificarNumero()">Verificar</button>
+
+    <p id="resultado"></p>
+
+    <script>
+        function verificarNumero() {
+            const num = parseFloat(document.getElementById('numero').value);
+            let mensaje = '';
+
+            if (isNaN(num)) {
+                mensaje = 'Por favor, ingresa un número válido.';
+            } else if (num > 0) {
+                mensaje = 'El número es positivo.';
+            } else if (num < 0) {
+                mensaje = 'El número es negativo.';
+            } else {
+                mensaje = 'El número es cero.';
+            }
+
+            document.getElementById('resultado').textContent = mensaje;
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
