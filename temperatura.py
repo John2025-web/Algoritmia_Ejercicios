@@ -7,6 +7,8 @@
         #Se evalúa si la temperatura es mayor o igual a 0.
         #Si es mayor o igual a 0, se muestra el mensaje "Está descongelado".
         #Si es menor que 0, se muestra el mensaje "Está congelado".
+        #holaaaaaaaaaaaaaaa
+
 
 num1 = float(input("Ingrese la temperatura: "))
 if num1>= 0:
